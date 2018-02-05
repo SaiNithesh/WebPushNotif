@@ -5,7 +5,7 @@
 //importScripts('https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js');
 /* importScripts('/__/firebase/init.js'); */
 
-//const messaging = firebase.messaging();
+const message = firebase.messaging();
 
 /**
  * Here is is the code snippet to initialize Firebase Messaging in the Service
@@ -32,7 +32,7 @@
 // background (Web app is closed or not in browser focus) then you should
 // implement this optional method.
 // [START background_handler]
-messaging.setBackgroundMessageHandler(function(payload) {
+message.setBackgroundMessageHandler(function(payload) {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
   // Customize notification here
   const notificationTitle = 'Background Message Title';
